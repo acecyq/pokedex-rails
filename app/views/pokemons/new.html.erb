@@ -1,0 +1,63 @@
+<div class="container">
+
+	<h4>Create new Pokemon</h4>
+
+	<%= form_for @pokemon, :html => {class: 'pokemon-form'} do |f| %>
+
+		<div class="form-group">
+			<%= f.label(:num, "Num") %>
+			<%= f.text_field :num %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label(:name, "Name") %>
+			<%= f.text_field :name %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label(:img, "Image") %>
+			<%= f.text_field :img %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label(:height, "Height") %>
+			<%= f.text_field :height %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label(:weight, "Weight") %>
+			<%= f.text_field :weight %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label(:candy, "Candy") %>
+			<%= f.text_field :candy %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label(:candy_count, "Candy Count") %>
+			<%= f.text_field :candy_count %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label(:egg, "Egg") %>
+			<%= f.text_field :egg %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label(:avg_spawns, "Average Spawns") %>
+			<%= f.text_field :avg_spawns %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label(:spawn_time, "Spawn Time") %>
+			<%= f.text_field :spawn_time %>
+		</div>
+
+		<div class="form-group">
+			<%= f.submit "Create" %>
+		</div>
+
+	<% end %>
+
+</div>

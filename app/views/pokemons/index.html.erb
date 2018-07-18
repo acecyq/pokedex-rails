@@ -1,0 +1,50 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Pokedex</title>
+</head>
+<body> -->
+	<div class="container">
+		<table class="table-hover table-dark table-striped">
+			<thead>
+				<tr>
+					<th>Num</th>
+					<th>Name</th>
+					<th>Image</th>
+					<th>Height</th>
+					<th>Weight</th>
+					<th>Candy</th>
+					<th>Candy Count</th>
+					<th>Egg</th>
+					<th>Average Spawns</th>
+					<th>Spawn Time</th>
+					<th>Edit</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @index.each do |p| %>
+				<tr onclick="window.location='/pokemons/<%= p.id %>';">
+					<td><%= p.num %></td>
+					<td><%= p.name %></td>
+					<td><img src='<%= p.img %>'></td>
+					<td><%= p.height %></td>
+					<td><%= p.weight %></td>
+					<td><%= p.candy %></td>
+					<td><%= p.candy_count %></td>
+					<td><%= p.egg %></td>
+					<td><%= p.avg_spawns %></td>
+					<td><%= p.spawn_time %></td>
+					<td><%= link_to 'Edit', edit_pokemon_path(p)%></td>
+					<td><%= link_to 'Delete', pokemon_path(p),
+        				method: :delete,
+        				data: { confirm: 'Are you sure?' } 
+        			%></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+		<%= link_to 'Home', pokemons_path %>
+	</div>
+<!-- </body>
+</html> -->
